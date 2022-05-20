@@ -8,6 +8,7 @@ environment:
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.2
+  audioplayers:
   flutter: 
     sdk: flutter
 
@@ -20,3 +21,10 @@ dev_dependencies:
 flutter: 
   uses-material-design: true
 
+
+  assets:
+    - assets/images/categories/
+    - assets/images/items/
+    - assets/images/avatars/
+    - assets/images/icons/
+    - assets/audio/
