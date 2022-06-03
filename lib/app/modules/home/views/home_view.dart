@@ -24,7 +24,7 @@ class HomeView extends GetView<HomeController> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'مرحبا ماجد',
+                            'مرحبا ${controller.fullName.value}',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,

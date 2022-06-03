@@ -4,9 +4,12 @@ import 'dart:ui';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:pecs_mobile/app/modules/localStorage.dart';
 import 'model.dart';
 
 class HomeController extends GetxController {
+  var fullName = ''.obs;
+
   AudioPlayer audioPlayer = AudioPlayer();
 
   var reset = true.obs;
@@ -187,10 +190,10 @@ class HomeController extends GetxController {
   Future<void> textToVoice() async {}
 
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
+    fullName.value = (await LocalStorage().read('fullName'))!;
     dataModel.value = Model.fromJson(data);
-    print(dataModel.value?.data?.length);
   }
 
   @override
