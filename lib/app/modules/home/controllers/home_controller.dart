@@ -1,10 +1,10 @@
-import 'dart:convert';
 import 'dart:typed_data';
-import 'dart:ui';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pecs_mobile/app/modules/localStorage.dart';
+
 import 'model.dart';
 
 class HomeController extends GetxController {
@@ -76,6 +76,37 @@ class HomeController extends GetxController {
                 'name': 'مثلجات',
                 'audio': 'انا أريد المثلجات.mp3',
                 'image': '5.png',
+              },
+              //new items
+              {
+                'name': 'خبز',
+                'audio': 'bread.mp3',
+                'image': 'bred.jpeg',
+              },
+              {
+                'name': 'بيض',
+                'audio': 'أنا أريد البيض.mp3',
+                'image': 'egg.jpeg',
+              },
+              {
+                'name': 'جبن',
+                'audio': 'أنا أريد الجبن .mp3',
+                'image': 'cheese.jpeg',
+              },
+              {
+                'name': 'حليب',
+                'audio': 'أنا أريد الحليب.mp3',
+                'image': 'milk.jpeg',
+              },
+              {
+                'name': 'زبادي',
+                'audio': 'أنا أريد الزبادي.mp3',
+                'image': 'yogurt.jpeg',
+              },
+              {
+                'name': 'شوكولاتة',
+                'audio': 'أنا أريد الشوكولاته .mp3',
+                'image': 'chocolate.jpeg',
               }
             ]
           },
@@ -183,7 +214,8 @@ class HomeController extends GetxController {
 
   playSound(String? fileName) async {
     ByteData bytes = await rootBundle.load('assets/audio/${fileName}');
-    Uint8List soundbytes = bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+    Uint8List soundbytes =
+        bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
     int result = await audioPlayer.playBytes(soundbytes);
   }
 

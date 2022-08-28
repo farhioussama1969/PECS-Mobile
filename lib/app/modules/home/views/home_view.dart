@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -30,7 +30,11 @@ class HomeView extends GetView<HomeController> {
                               fontSize: 20,
                             ),
                           ),
-                          Image.asset('assets/images/avatars/1.png', width: 57),
+                          GestureDetector(
+                            onTap: () => Get.toNamed(Routes.USER_INFO),
+                            child: Image.asset('assets/images/avatars/1.png',
+                                width: 57),
+                          ),
                         ],
                       ),
                     ),
@@ -57,9 +61,11 @@ class HomeView extends GetView<HomeController> {
                                       borderRadius: BorderRadius.circular(22),
                                       color: Color(0xFFFFEAD1),
                                       border: Border.all(
-                                        color: controller.selectedAction.value == index
-                                            ? Color(0xFFE64219)
-                                            : Colors.transparent,
+                                        color:
+                                            controller.selectedAction.value ==
+                                                    index
+                                                ? Color(0xFFE64219)
+                                                : Colors.transparent,
                                         width: 2,
                                       ),
                                     ),
@@ -89,15 +95,21 @@ class HomeView extends GetView<HomeController> {
                     Obx(() {
                       return Expanded(
                         child: GridView.builder(
-                            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                                maxCrossAxisExtent: 300,
-                                childAspectRatio: 2,
-                                mainAxisExtent: 123,
-                                crossAxisSpacing: 20,
-                                mainAxisSpacing: 20),
+                            gridDelegate:
+                                const SliverGridDelegateWithMaxCrossAxisExtent(
+                                    maxCrossAxisExtent: 300,
+                                    childAspectRatio: 2,
+                                    mainAxisExtent: 123,
+                                    crossAxisSpacing: 20,
+                                    mainAxisSpacing: 20),
                             itemCount: controller
-                                .dataModel.value?.data?[controller.selectedAction.value].categories?.length,
-                            padding: EdgeInsets.only(right: 20, left: 20, bottom: 190),
+                                .dataModel
+                                .value
+                                ?.data?[controller.selectedAction.value]
+                                .categories
+                                ?.length,
+                            padding: EdgeInsets.only(
+                                right: 20, left: 20, bottom: 190),
                             //shrinkWrap: true,
                             physics: AlwaysScrollableScrollPhysics(),
                             itemBuilder: (BuildContext ctx, int index) {
@@ -167,7 +179,8 @@ class HomeView extends GetView<HomeController> {
                               color: Colors.black.withOpacity(0.25),
                               spreadRadius: 0,
                               blurRadius: 2,
-                              offset: Offset(0, 0), // changes position of shadow
+                              offset:
+                                  Offset(0, 0), // changes position of shadow
                             ),
                           ],
                         ),
@@ -208,7 +221,8 @@ class HomeView extends GetView<HomeController> {
                                     color: Colors.black.withOpacity(0.25),
                                     spreadRadius: 0,
                                     blurRadius: 2,
-                                    offset: Offset(0, 0), // changes position of shadow
+                                    offset: Offset(
+                                        0, 0), // changes position of shadow
                                   ),
                                 ],
                               ),
@@ -237,7 +251,8 @@ class HomeView extends GetView<HomeController> {
                                     color: Colors.black.withOpacity(0.25),
                                     spreadRadius: 0,
                                     blurRadius: 2,
-                                    offset: Offset(0, 0), // changes position of shadow
+                                    offset: Offset(
+                                        0, 0), // changes position of shadow
                                   ),
                                 ],
                               ),
@@ -247,14 +262,17 @@ class HomeView extends GetView<HomeController> {
                                   Visibility(
                                     child: Center(
                                       child: Container(
-                                        child: Image.asset(controller.selectedItem.value != 9999
+                                        child: Image.asset(controller
+                                                    .selectedItem.value !=
+                                                9999
                                             ? 'assets/images/items/${controller.dataModel.value?.data?[controller.selectedAction.value].categories?[controller.selectedCategory.value].items?[controller.selectedItem.value].image}'
                                             : 'assets/images/items/9.png'),
                                         width: 60,
                                         height: 60,
                                       ),
                                     ),
-                                    visible: controller.selectedItem.value != 9999,
+                                    visible:
+                                        controller.selectedItem.value != 9999,
                                   ),
                                   Center(
                                     child: Text(
@@ -290,7 +308,8 @@ class HomeView extends GetView<HomeController> {
         height: 370,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(40), topRight: Radius.circular(40)),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40), topRight: Radius.circular(40)),
         ),
         child: Column(
           children: [
@@ -298,14 +317,20 @@ class HomeView extends GetView<HomeController> {
             Obx(() {
               return Expanded(
                 child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                        maxCrossAxisExtent: 300,
-                        childAspectRatio: 2,
-                        mainAxisExtent: 123,
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 20),
-                    itemCount: controller.dataModel.value?.data?[controller.selectedAction.value]
-                        .categories?[categoryIndex].items?.length,
+                    gridDelegate:
+                        const SliverGridDelegateWithMaxCrossAxisExtent(
+                            maxCrossAxisExtent: 300,
+                            childAspectRatio: 2,
+                            mainAxisExtent: 123,
+                            crossAxisSpacing: 20,
+                            mainAxisSpacing: 20),
+                    itemCount: controller
+                        .dataModel
+                        .value
+                        ?.data?[controller.selectedAction.value]
+                        .categories?[categoryIndex]
+                        .items
+                        ?.length,
                     padding: EdgeInsets.only(right: 20, left: 20, bottom: 190),
                     //shrinkWrap: true,
                     physics: AlwaysScrollableScrollPhysics(),
