@@ -56,6 +56,36 @@ class HomeController extends GetxController {
                 'audio': 'انا اريد الكرة.mp3',
                 'image': '4.png',
               },
+              {
+                'name': 'التلفاز',
+                'audio': 'أنا أريد التلفاز .mp3',
+                'image': 'tv.jpeg',
+              },
+              {
+                'name': 'الحاسوب',
+                'audio': 'أنا أريد الحاسوب.mp3',
+                'image': 'computer.jpeg',
+              },
+              {
+                'name': 'الدراجة',
+                'audio': 'أنا أريد الدراجة .mp3',
+                'image': 'bicycle.png',
+              },
+              {
+                'name': 'الشطرنج',
+                'audio': 'أنا أريد الشطرنج .mp3',
+                'image': 'chess.jpeg',
+              },
+              {
+                'name': 'الهاتف',
+                'audio': 'أنا أريد الهاتف .mp3',
+                'image': 'phone.png',
+              },
+              {
+                'name': 'بطاقات اللعب',
+                'audio': 'أنا أريد بطاقات اللعب .mp3',
+                'image': 'playcard.jpeg',
+              },
             ]
           },
           {
@@ -205,6 +235,57 @@ class HomeController extends GetxController {
               },
             ]
           }
+        ]
+      },
+      {
+        "name": "أنا أشعر",
+        "categories": [
+          {
+            "name": "الأحاسيس",
+            "image": "6.png",
+            "items": [
+              {
+                'name': 'البرد',
+                'audio': 'أنا أشعر بالبرد.mp3',
+                'image': 'cold.jpeg',
+              },
+              {
+                'name': 'الحر',
+                'audio': 'أنا أشعر بالحر.mp3',
+                'image': 'hot.jpg',
+              },
+              {
+                'name': 'الخوف',
+                'audio': 'أنا أشعر بالخوف.mp3',
+                'image': 'afraid.jpeg',
+              },
+              {
+                'name': 'السعادة',
+                'audio': 'أنا أشعر بالسعادة.mp3',
+                'image': 'happy.jpeg',
+              },
+              {
+                'name': 'الغضب',
+                'audio': 'أنا أشعر بالغضب.mp3',
+                'image': 'angry.jpeg',
+              },
+              {
+                'name': 'المرض',
+                'audio': 'أنا أشعر بالمرض.mp3',
+                'image': 'ill.jpeg',
+              },
+              {
+                'name': 'الملل',
+                'audio': 'أنا أشعر بالملل.mp3',
+                'image': 'bored.jpeg',
+              },
+              {
+                'name': 'النعاس',
+                'audio': 'أنا أشعر بالنعاس.mp3',
+                'image': 'sleepy.jpeg',
+              },
+            ]
+          },
         ]
       }
     ]
