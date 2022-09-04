@@ -23,12 +23,26 @@ class HomeView extends GetView<HomeController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            'مرحبا ${controller.fullName.value}',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
+                          GestureDetector(
+                            child: Container(
+                              child: Text(
+                                'معلوماتي الشخصية',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: Colors.blueAccent,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
                             ),
+                            onTap: () {
+                              Get.toNamed(Routes.USER_INFO);
+                            },
                           ),
                           GestureDetector(
                             onTap: () => Get.toNamed(Routes.USER_INFO),

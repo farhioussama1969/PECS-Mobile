@@ -182,6 +182,42 @@ class HomeController extends GetxController {
                 'image': '7.png',
               },
             ]
+          },
+          {
+            "name": "ألوان",
+            "image": "7.png",
+            "items": [
+              {
+                'name': 'اللون الأحمر',
+                'audio': 'أنا أرى اللون الأحمر.mp3',
+                'image': 'red.png',
+              },
+              {
+                'name': 'اللون الأخضر',
+                'audio': 'أنا أرى اللون الأخضر .mp3',
+                'image': 'green.png',
+              },
+              {
+                'name': 'اللون الأزرق',
+                'audio': 'أنا أرى اللون الأزرق.mp3',
+                'image': 'blue.png',
+              },
+              {
+                'name': 'اللون الأصفر',
+                'audio': 'أنا أرى اللون الأصفر.mp3',
+                'image': 'yellow.jpeg',
+              },
+              {
+                'name': 'اللون البرتقالي',
+                'audio': 'أنا أرى اللون البرتقالي.mp3',
+                'image': 'orange.png',
+              },
+              {
+                'name': 'اللون البني',
+                'audio': 'أنا أرى اللون البني.mp3',
+                'image': 'brown.jpeg',
+              },
+            ]
           }
         ]
       },
